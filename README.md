@@ -1,43 +1,42 @@
-# realestateCare-hello-world
+# RealEstateCare
 
-This template should help get you started developing with Vue 3 in Vite.
+RealEstateCare is een webapplicatie gebouwd met Vue 3 en Vite. De applicatie is bedoeld om vastgoed op een overzichtelijke manier te bekijken en te beheren. Gebruikers kunnen woningen inzien en navigeren door verschillende onderdelen van de applicatie.
 
-## Recommended IDE Setup
+Dit project is gemaakt als onderdeel van een front-end development opleiding, waarbij gewerkt wordt met component-based development in Vue.
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+---
 
-## Recommended Browser Setup
+## Gebruikte technologieën
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+- Vue 3
+- Vite
+- JavaScript (ES6+)
+- HTML5
+- CSS3
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
+---
 
 ## Project Setup
+
+Installeer de benodigde packages:
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Development starten
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+### Productie build maken
 
 ```sh
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+### Lint met [ESLint](https://eslint.org/)
 
 ```sh
 npm run lint
