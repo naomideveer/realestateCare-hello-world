@@ -19,9 +19,9 @@ export default {
 </script>
 
 <template>
-  <v-container fluid style="padding: 16px">
-    <v-row style="margin: 0">
-      <v-col v-for="card in cards" :key="card.to" cols="6" style="padding: 8px">
+  <v-container fluid class="dashboard-grid">
+    <v-row class="dashboard-row">
+      <v-col v-for="card in cards" :key="card.to" cols="6" class="dashboard-col">
         <DashboardCard :title="card.title" :icon="card.icon" :badge="card.badge" :to="card.to" />
       </v-col>
     </v-row>

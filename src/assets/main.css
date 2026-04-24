@@ -1,0 +1,32 @@
+:root {
+  --color-primary: #293439;
+  --color-secondary: #00aaa2;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --font-size-card: 15px;
+}
+
+.dashboard-grid {
+  padding: var(--spacing-md);
+}
+
+.dashboard-row {
+  margin: 0;
+}
+
+.dashboard-col {
+  padding: var(--spacing-sm);
+}
+
+.card-title {
+  font-size: var(--font-size-card);
+  font-weight: bold;
+}
+
+.main-content {
+  padding-top: 64px;
+}
+
+.clickable {
+  cursor: pointer;
+}

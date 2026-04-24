@@ -10,7 +10,7 @@ export default {
 <template>
   <v-app>
     <AppHeader />
-    <v-main style="padding-top: 64px">
+    <v-main class="main-content">
       <router-view />
     </v-main>
     <AppTabBar />
