@@ -1,0 +1,151 @@
+{
+  "inspections": [
+    {
+      "id": 1,
+      "propertyId": "P-1001",
+      "address": "Hoofdstraat 2, Eindhoven",
+      "inspectorName": "Jan de Vries",
+      "date": "2026-01-20T10:00:00+01:00",
+      "status": "completed",
+      "damage": [
+        {
+          "id": "D-001",
+          "location": "Woonkamer plafond",
+          "isNewDamage": true,
+          "damageType": "calamity",
+          "requiresImmediateAction": true,
+          "description": "Waterleiding gebarsten, groot natte plek op plafond zichtbaar."
+        }
+      ],
+      "deferredMaintenance": [
+        {
+          "id": "DM-001",
+          "location": "Badkamer",
+          "maintenanceType": "plumbing",
+          "requiresImmediateAction": false,
+          "costEstimate": "500-1500"
+        }
+      ],
+      "technicalInstallations": [],
+      "modifications": []
+    },
+
+    {
+      "id": 2,
+      "propertyId": "P-1002",
+      "address": "Hoofdstraat 4, Eindhoven",
+      "inspectorName": "Karin de Groot",
+      "date": "2026-03-02T11:00:00+01:00",
+      "status": "completed",
+      "damage": [],
+      "deferredMaintenance": [
+        {
+          "id": "DM-002",
+          "location": "Voordeur buitenkant",
+          "maintenanceType": "paintwork",
+          "requiresImmediateAction": false,
+          "costEstimate": "0-500"
+        }
+      ],
+      "technicalInstallations": [
+        {
+          "id": "TI-001",
+          "location": "Meterkast",
+          "installationType": "electrical",
+          "isApproved": true,
+          "remarks": "Alles getest, geen bijzonderheden."
+        }
+      ],
+      "modifications": []
+    },
+
+    {
+      "id": 3,
+      "propertyId": "P-1003",
+      "address": "Hoofdstraat 6, Eindhoven",
+      "inspectorName": "Susanne Vermeer",
+      "date": "2026-02-10T09:30:00+01:00",
+      "status": "completed",
+      "damage": [
+        {
+          "id": "D-002",
+          "location": "Slaapkamer muur",
+          "isNewDamage": false,
+          "damageType": "normalUse",
+          "requiresImmediateAction": false,
+          "description": "Kleine krassen langs de plinten, normaal gebruiksspoor."
+        }
+      ],
+      "deferredMaintenance": [],
+      "technicalInstallations": [],
+      "modifications": [
+        {
+          "id": "MOD-001",
+          "location": "Keuken",
+          "executedBy": "tenant",
+          "description": "Huurder heeft extra wandkasten geplaatst zonder toestemming.",
+          "requiredAction": "inspect"
+        }
+      ]
+    },
+
+    {
+      "id": 4,
+      "propertyId": "P-1004",
+      "address": "Hoofdstraat 8, Eindhoven",
+      "inspectorName": "Jan de Vries",
+      "date": "2026-02-14T10:45:00+01:00",
+      "status": "completed",
+      "damage": [],
+      "deferredMaintenance": [
+        {
+          "id": "DM-003",
+          "location": "Keukenraam kozijn",
+          "maintenanceType": "woodRot",
+          "requiresImmediateAction": true,
+          "costEstimate": "500-1500"
+        }
+      ],
+      "technicalInstallations": [
+        {
+          "id": "TI-002",
+          "location": "Cv-ruimte",
+          "installationType": "heating",
+          "isApproved": false,
+          "remarks": "Ketel geeft onregelmatige drukwaarden, onderhoud nodig."
+        }
+      ],
+      "modifications": []
+    },
+
+    {
+      "id": 5,
+      "propertyId": "P-1005",
+      "address": "Hoofdstraat 10, Eindhoven",
+      "inspectorName": "Susanne Vermeer",
+      "date": "2026-04-12T09:15:00+01:00",
+      "status": "completed",
+      "damage": [
+        {
+          "id": "D-003",
+          "location": "Tuinschuur dak",
+          "isNewDamage": true,
+          "damageType": "calamity",
+          "requiresImmediateAction": true,
+          "description": "Stormschade heeft een deel van het dak beschadigd."
+        }
+      ],
+      "deferredMaintenance": [],
+      "technicalInstallations": [],
+      "modifications": [
+        {
+          "id": "MOD-002",
+          "location": "Woonkamer",
+          "executedBy": "unknown",
+          "description": "Niet-dragende muur gedeeltelijk verwijderd, geen vergunning aangetroffen.",
+          "requiredAction": "remove"
+        }
+      ]
+    }
+  ]
+}
