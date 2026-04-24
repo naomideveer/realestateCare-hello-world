@@ -1,8 +1,10 @@
 <script>
 import DashboardCard from '../components/DashboardCard.vue'
+import CompletedInspections from '../components/CompletedInspections.vue'
+
 export default {
   name: 'DashboardView',
-  components: { DashboardCard },
+  components: { DashboardCard, CompletedInspections },
   data() {
     return {
       cards: [
@@ -23,5 +25,7 @@ export default {
         <DashboardCard :title="card.title" :icon="card.icon" :badge="card.badge" :to="card.to" />
       </v-col>
     </v-row>
+
+    <CompletedInspections />
   </v-container>
 </template>

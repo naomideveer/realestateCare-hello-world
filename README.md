@@ -41,3 +41,10 @@ npm run build
 ```sh
 npm run lint
 ```
+
+---
+
+## API
+
+De inspectiedata wordt opgehaald via MyJSONServer:
+https://my-json-server.typicode.com/naomideveer/realestateCare-hello-world/inspections

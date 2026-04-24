@@ -1,31 +1,19 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import DashboardView from '../views/DashboardView.vue'
+import AssignedView from '../views/AssignedView.vue'
+import CompletedView from '../views/CompletedView.vue'
+import KnowledgeView from '../views/KnowledgeView.vue'
+import SettingsView from '../views/SettingsView.vue'
 
 const router = createRouter({
   history: createWebHashHistory(),
   routes: [
     { path: '/', redirect: '/dashboard' },
     { path: '/dashboard', component: DashboardView },
-    {
-      path: '/assigned',
-      component: {
-        template: '<div class="pa-4"><p class="text-h6">Toegewezen rapportages</p></div>',
-      },
-    },
-    {
-      path: '/completed',
-      component: {
-        template: '<div class="pa-4"><p class="text-h6">Uitgevoerde rapportages</p></div>',
-      },
-    },
-    {
-      path: '/knowledge',
-      component: { template: '<div class="pa-4"><p class="text-h6">Kennisbase</p></div>' },
-    },
-    {
-      path: '/settings',
-      component: { template: '<div class="pa-4"><p class="text-h6">Instellingen</p></div>' },
-    },
+    { path: '/assigned', component: AssignedView },
+    { path: '/completed', component: CompletedView },
+    { path: '/knowledge', component: KnowledgeView },
+    { path: '/settings', component: SettingsView },
   ],
 })
 
