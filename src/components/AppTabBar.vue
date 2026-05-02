@@ -6,16 +6,18 @@ export default {
 
 <template>
   <v-bottom-navigation bg-color="secondary" color="white" grow>
+    <v-btn @click="$router.push('/dashboard')">
+      <v-icon>mdi-home-outline</v-icon>
+      <span>Home</span>
+    </v-btn>
     <v-btn @click="$router.push('/assigned')">
       <v-icon>mdi-wrench-outline</v-icon>
       <span>Active task</span>
     </v-btn>
-
     <v-btn @click="$router.push('/knowledge')">
       <v-icon>mdi-magnify</v-icon>
       <span>Search</span>
     </v-btn>
-
     <v-btn @click="$router.push('/settings')">
       <v-icon>mdi-information-outline</v-icon>
       <span>Information</span>

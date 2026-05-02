@@ -18,7 +18,9 @@ export default {
   async created() {
     try {
       const data = await fetchInspections()
-      this.inspections = data.sort((a, b) => new Date(b.date) - new Date(a.date))
+      this.inspections = data
+        .filter((i) => i.status === 'completed')
+        .sort((a, b) => new Date(b.date) - new Date(a.date))
     } catch (_e) {
       console.error('Fout bij ophalen inspecties:', _e)
       this.error = 'Kon de inspecties niet laden. Controleer je verbinding.'
