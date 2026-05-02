@@ -1,5 +1,5 @@
 <script>
-import { fetchInspections } from '@/services/inspectionService'
+import { useInspectionStore } from '@/stores/inspectionStore'
 import InspectionDetail from '@/components/InspectionDetail.vue'
 
 export default {
@@ -9,22 +9,21 @@ export default {
 
   data() {
     return {
-      inspections: [],
       selectedInspection: null,
-      error: null,
     }
   },
 
+  computed: {
+    inspections() {
+      return useInspectionStore().assignedInspections
+    },
+    error() {
+      return useInspectionStore().error
+    },
+  },
+
   async created() {
-    try {
-      const data = await fetchInspections()
-      this.inspections = data
-        .filter((i) => i.status === 'assigned')
-        .sort((a, b) => new Date(b.date) - new Date(a.date))
-    } catch (_e) {
-      console.error('Fout bij ophalen inspecties:', _e)
-      this.error = 'Kon de inspecties niet laden. Controleer je verbinding.'
-    }
+    await useInspectionStore().loadInspections()
   },
 
   methods: {
