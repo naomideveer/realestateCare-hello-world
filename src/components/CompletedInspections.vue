@@ -11,12 +11,18 @@ export default {
     return {
       inspections: [],
       selectedInspection: null,
+      error: null,
     }
   },
 
   async created() {
-    const data = await fetchInspections()
-    this.inspections = data.sort((a, b) => new Date(b.date) - new Date(a.date))
+    try {
+      const data = await fetchInspections()
+      this.inspections = data.sort((a, b) => new Date(b.date) - new Date(a.date))
+    } catch (_e) {
+      console.error('Fout bij ophalen inspecties:', _e)
+      this.error = 'Kon de inspecties niet laden. Controleer je verbinding.'
+    }
   },
 
   methods: {
@@ -35,20 +41,22 @@ export default {
 </script>
 
 <template>
-  <v-list>
-    <v-list-item
-      v-for="inspection in inspections"
-      :key="inspection.id"
-      @click="selectInspection(inspection)"
-    >
-      <v-list-item-title>
-        {{ inspection.address }}
-      </v-list-item-title>
-      <v-list-item-subtitle>
-        {{ formatDate(inspection.date) }} · {{ inspection.inspectorName }}
-      </v-list-item-subtitle>
-    </v-list-item>
-  </v-list>
-
-  <InspectionDetail v-if="selectedInspection" :inspection="selectedInspection" />
+  <div>
+    <v-alert v-if="error" type="error" class="mb-4">
+      {{ error }}
+    </v-alert>
+    <v-list>
+      <v-list-item
+        v-for="inspection in inspections"
+        :key="inspection.id"
+        @click="selectInspection(inspection)"
+      >
+        <v-list-item-title>{{ inspection.address }}</v-list-item-title>
+        <v-list-item-subtitle>
+          {{ formatDate(inspection.date) }} · {{ inspection.inspectorName }}
+        </v-list-item-subtitle>
+      </v-list-item>
+    </v-list>
+    <InspectionDetail v-if="selectedInspection" :inspection="selectedInspection" />
+  </div>
 </template>
