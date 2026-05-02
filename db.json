@@ -29,7 +29,6 @@
       "technicalInstallations": [],
       "modifications": []
     },
-
     {
       "id": 2,
       "propertyId": "P-1002",
@@ -58,7 +57,6 @@
       ],
       "modifications": []
     },
-
     {
       "id": 3,
       "propertyId": "P-1003",
@@ -88,7 +86,6 @@
         }
       ]
     },
-
     {
       "id": 4,
       "propertyId": "P-1004",
@@ -117,7 +114,6 @@
       ],
       "modifications": []
     },
-
     {
       "id": 5,
       "propertyId": "P-1005",
@@ -146,6 +142,30 @@
           "requiredAction": "remove"
         }
       ]
+    },
+    {
+      "id": 6,
+      "propertyId": "P-1006",
+      "address": "Kerkstraat 14, Eindhoven",
+      "inspectorName": "Jan de Vries",
+      "date": "2026-05-05T09:00:00+02:00",
+      "status": "assigned",
+      "damage": [],
+      "deferredMaintenance": [],
+      "technicalInstallations": [],
+      "modifications": []
+    },
+    {
+      "id": 7,
+      "propertyId": "P-1007",
+      "address": "Molenstraat 22, Eindhoven",
+      "inspectorName": "Karin de Groot",
+      "date": "2026-05-08T13:00:00+02:00",
+      "status": "assigned",
+      "damage": [],
+      "deferredMaintenance": [],
+      "technicalInstallations": [],
+      "modifications": []
     }
   ]
 }
