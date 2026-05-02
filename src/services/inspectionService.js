@@ -1,3 +1,4 @@
+import axios from 'axios'
 import { Inspection } from '@/models/Inspection'
 
 const API_URL =
@@ -5,16 +6,10 @@ const API_URL =
 
 export async function fetchInspections() {
   try {
-    const response = await fetch(API_URL)
-
-    if (!response.ok) {
-      throw new Error(`API fout: ${response.status}`)
-    }
-
-    const data = await response.json()
-    return data.map((item) => new Inspection(item))
-  } catch (error) {
-    console.error('Fout bij ophalen inspecties:', error)
-    throw error
+    const response = await axios.get(API_URL)
+    return response.data.map((item) => new Inspection(item))
+  } catch (_e) {
+    console.error('Fout bij ophalen inspecties:', _e)
+    throw _e
   }
 }
