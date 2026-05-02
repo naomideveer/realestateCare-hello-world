@@ -7,7 +7,13 @@ export default {
 <template>
   <v-app-bar color="primary" elevation="2" app>
     <v-app-bar-title>
-      <img src="/logo_rec.png" alt="RealEstateCare" height="36" />
+      <img
+        src="/logo_rec.png"
+        alt="RealEstateCare"
+        height="36"
+        class="clickable"
+        @click="$router.push('/dashboard')"
+      />
     </v-app-bar-title>
     <template #append>
       <v-btn icon>
