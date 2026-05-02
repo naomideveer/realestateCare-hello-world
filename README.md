@@ -10,6 +10,9 @@ Dit project is gemaakt als onderdeel van een front-end development opleiding, wa
 
 - Vue 3
 - Vite
+- Vuetify 3 (UI framework)
+- Pinia (state management)
+- Axios (HTTP client)
 - JavaScript (ES6+)
 - HTML5
 - CSS3
@@ -48,3 +51,15 @@ npm run lint
 
 De inspectiedata wordt opgehaald via MyJSONServer:
 https://my-json-server.typicode.com/naomideveer/realestateCare-hello-world/inspections
+
+--
+
+## Projectstructuur
+
+- `src/components` — herbruikbare UI-componenten
+- `src/views` — paginacomponenten gekoppeld aan routes
+- `src/services` — API-communicatie via Axios
+- `src/models` — datamodellen
+- `src/stores` — Pinia stores voor state management
+- `src/assets` — globale stijlen
+- `db.json` — mockdata voor MyJSONServer
