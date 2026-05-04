@@ -40,3 +40,12 @@
 .login-row {
   width: 100%;
 }
+
+.login-logo-bar {
+  background-color: var(--color-primary);
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+  border-radius: 8px 8px 0 0;
+  margin: -24px -24px 24px -24px;
+}

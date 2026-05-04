@@ -20,10 +20,10 @@ export default {
   data() {
     return {
       cards: [
-        { title: 'Scheduled', icon: 'mdi-clipboard-text-outline', to: '/assigned' },
-        { title: 'Completed', icon: 'mdi-clipboard-check-outline', badge: 0, to: '/completed' },
-        { title: 'Knowledge base', icon: 'mdi-book-open-outline', badge: 0, to: '/knowledge' },
-        { title: 'Settings', icon: 'mdi-cog-outline', badge: 0, to: '/settings' },
+        { title: 'Toegewezen', icon: 'mdi-clipboard-text-outline', to: '/assigned' },
+        { title: 'Uitgevoerd', icon: 'mdi-clipboard-check-outline', badge: 0, to: '/completed' },
+        { title: 'Kennisbase', icon: 'mdi-book-open-outline', badge: 0, to: '/knowledge' },
+        { title: 'Instellingen', icon: 'mdi-cog-outline', badge: 0, to: '/settings' },
       ],
     }
   },

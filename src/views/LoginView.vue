@@ -31,7 +31,7 @@ export default {
     <v-row justify="center" align="center" class="login-row">
       <v-col cols="12" sm="8" md="6">
         <v-card elevation="4" class="pa-6">
-          <div class="d-flex jutify-center mb-6">
+          <div class="login-logo-bar">
             <img src="/logo_rec.png" alt="RealEstateCare" height="48" />
           </div>
 
