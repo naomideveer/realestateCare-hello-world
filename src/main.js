@@ -32,6 +32,10 @@ const vuetify = createVuetify({
   },
 })
 
+if (!localStorage.getItem('users')) {
+  localStorage.setItem('users', JSON.stringify([{ username: 'inspector', password: 'test123' }]))
+}
+
 const app = createApp(App)
 app.use(createPinia())
 app.use(router)
