@@ -30,3 +30,13 @@
 .clickable {
   cursor: pointer;
 }
+
+.login-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.login-row {
+  width: 100%;
+}
