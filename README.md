@@ -60,9 +60,9 @@ https://my-json-server.typicode.com/naomideveer/realestateCare-hello-world/inspe
 - `src/views` — paginacomponenten gekoppeld aan routes
 - `src/services` — API-communicatie via Axios
 - `src/models` — datamodellen
-- `src/stores` — Pinia stores voor state management
+- `src/stores` — Pinia stores voor state management (inspections en thema)
 - `src/assets` — globale stijlen
-- `db.json` — mockdata voor MyJSONServerGraa
+- `db.json` — mockdata voor MyJSONServer
 
 ---
 
@@ -91,6 +91,7 @@ De volgende beveiligingsmaatregelen zijn getroffen:
 - **Uitlogfunctionaliteit**: de gebruiker kan uitloggen via de uitlogknop in de header,
   waarbij de sessie uit `localStorage` wordt verwijderd.
 - **Geen gevoelige data in de broncode**: API-sleutels of wachtwoorden staan niet hardcoded in de broncode.
+- **Themavoorkeur**: gebruikersvoorkeuren zoals het donker thema worden opgeslagen in `localStorage` zodat de instelling bewaard blijft na het sluiten van de browser.
 
 In een productieomgeving zou dit vervangen worden door een echte authenticatieservice met JWT-tokens en HTTPS.
 
@@ -119,11 +120,11 @@ In een productieomgeving zou dit vervangen worden door een echte authenticatiese
 - Afbeeldingen hebben een `alt`-attribuut.
 - Formuliervelden hebben labels via Vuetify.
 - Kleurcontrast tussen de primaire kleur (#293439) en witte tekst voldoet aan WCAG AA.
+- ARIA-labels zijn toegevoegd aan de tabbar en header iconen.
 
 **Wat nog ontbreekt:**
 
 - Volledige toetsenbordnavigatie is niet getest.
-- ARIA-labels voor iconen in de tabbar zijn niet volledig geïmplementeerd.
 - Een formele WAVE-test is nog niet uitgevoerd.
 
 ---
@@ -135,3 +136,4 @@ In een productieomgeving zou dit vervangen worden door een echte authenticatiese
 - **Geen inline stijlen**: alle stijlen zijn verplaatst naar `main.css` met CSS-variabelen.
 - **Asynchroon programmeren**: API-calls worden asynchroon uitgevoerd met `async/await` en voorzien van error handling via `try/catch`.
 - **Naamgeving**: bestanden en variabelen volgen de Vue-stijlgids (PascalCase voor componenten, camelCase voor variabelen).
+- **Donker thema**: het thema wordt beheerd via een aparte Pinia store (`themeStore`) en Vuetify's ingebouwde thema-ondersteuning. De voorkeur wordt opgeslagen in `localStorage` zodat de instelling bewaard blijft.
