@@ -49,19 +49,29 @@ export default {
       {{ error }}
     </v-alert>
 
-    <v-list>
-      <v-list-item
-        v-for="inspection in inspections"
-        :key="inspection.id"
-        @click="selectInspection(inspection)"
-      >
-        <v-list-item-title>{{ inspection.address }}</v-list-item-title>
-        <v-list-item-subtitle>
-          {{ formatDate(inspection.date) }} · {{ inspection.inspectorName }}
-        </v-list-item-subtitle>
-      </v-list-item>
-    </v-list>
+    <v-row>
+      <v-col v-for="inspection in inspections" :key="inspection.id" cols="12">
+        <v-card
+          elevation="2"
+          class="clickable mb-2"
+          @click="selectInspection(inspection)"
+          :class="{
+            'selected-card': selectedInspection && selectedInspection.id === inspection.id,
+          }"
+        >
+          <v-card-text>
+            <div class="d-flex justify-space-between align-center">
+              <p class="font-weight-bold text-primary">{{ inspection.address }}</p>
+              <p class="text-grey text-sm">{{ inspection.inspectorName }}</p>
+            </div>
+            <v-chip color="secondary" size="small">
+              {{ formatDate(inspection.date) }}
+            </v-chip>
+          </v-card-text>
+        </v-card>
+      </v-col>
+    </v-row>
 
-    <InspectionDetail v-if="selectedInspection" :inspection="selectedInspection" />
+    <InspectionDetail v-if="selectedInspection" :inspection="selectedInspection" class="mt-4" />
   </div>
 </template>
