@@ -26,7 +26,7 @@ export default {
       <v-btn icon>
         <v-icon color="secondary">mdi-bell-outline</v-icon>
       </v-btn>
-      <v-btn icon>
+      <v-btn icon @click="$router.push('/settings')">
         <v-icon color="secondary">mdi-cog-outline</v-icon>
       </v-btn>
       <v-btn icon @click="logout">
