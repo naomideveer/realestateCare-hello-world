@@ -15,8 +15,8 @@ export default {
       <span>Toegewezen</span>
     </v-btn>
     <v-btn @click="$router.push('/knowledge')">
-      <v-icon>mdi-magnify</v-icon>
-      <span>Zoeken</span>
+      <v-icon>mdi-book-open-outline</v-icon>
+      <span>Kennisbase</span>
     </v-btn>
     <v-btn @click="$router.push('/settings')">
       <v-icon>mdi-information-outline</v-icon>

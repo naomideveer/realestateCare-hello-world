@@ -62,7 +62,7 @@ https://my-json-server.typicode.com/naomideveer/realestateCare-hello-world/inspe
 - `src/models` — datamodellen
 - `src/stores` — Pinia stores voor state management
 - `src/assets` — globale stijlen
-- `db.json` — mockdata voor MyJSONServer
+- `db.json` — mockdata voor MyJSONServerGraa
 
 ---
 
