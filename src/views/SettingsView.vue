@@ -1,6 +1,19 @@
 <script>
+import { useThemeStore } from '@/stores/themeStore'
+
 export default {
   name: 'SettingsView',
+
+  computed: {
+    darkMode: {
+      get() {
+        return useThemeStore().darkMode
+      },
+      set() {
+        useThemeStore().toggleDarkMode()
+      },
+    },
+  },
 
   data() {
     return {
@@ -9,7 +22,6 @@ export default {
         email: 'jan.devries@realestate.nl',
         avatar: 'mdi-account-circle',
       },
-      darkMode: false,
       notifications: true,
       sounds: false,
     }
