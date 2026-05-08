@@ -1,6 +1,13 @@
 <script>
 export default {
   name: 'AppHeader',
+
+  methods: {
+    logout() {
+      localStorage.removeItem('loggedIn')
+      this.$router.push('/login')
+    },
+  },
 }
 </script>
 
@@ -21,6 +28,9 @@ export default {
       </v-btn>
       <v-btn icon>
         <v-icon color="secondary">mdi-cog-outline</v-icon>
+      </v-btn>
+      <v-btn icon @click="logout">
+        <v-icon color="secondary">mdi-logout</v-icon>
       </v-btn>
     </template>
   </v-app-bar>
