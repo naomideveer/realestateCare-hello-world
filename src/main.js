@@ -11,6 +11,7 @@ import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 
 import './assets/main.css'
+import '@fontsource/roboto'
 
 const vuetify = createVuetify({
   components,
