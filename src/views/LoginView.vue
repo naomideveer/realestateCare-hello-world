@@ -56,6 +56,7 @@ export default {
             type="password"
             variant="outlined"
             class="mb-4"
+            @keyup.enter="login"
           />
 
           <v-btn color="primary" block size="large" @click="login"> Inloggen </v-btn>
