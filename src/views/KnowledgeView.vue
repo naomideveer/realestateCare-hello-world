@@ -56,7 +56,7 @@ export default {
 
 <template>
   <div class="pa-4">
-    <p class="text-h6">Kennisbase</p>
+    <p class="page-title">Kennisbase</p>
 
     <div v-for="category in categories" :key="category" class="mb-4">
       <p class="text-subtitle-1 font-weight-bold mb-2">{{ category }}</p>

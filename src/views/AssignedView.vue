@@ -43,7 +43,7 @@ export default {
 
 <template>
   <div class="pa-4">
-    <p class="text-h6 mb-4">Toegewezen rapportages</p>
+    <p class="page-title">Toegewezen rapportages</p>
 
     <v-alert v-if="error" type="error" class="mb-4">
       {{ error }}

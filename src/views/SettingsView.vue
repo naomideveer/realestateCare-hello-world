@@ -19,7 +19,7 @@ export default {
 
 <template>
   <div class="pa-4">
-    <p class="text-h6">Instellingen</p>
+    <p class="page-title">Instellingen</p>
 
     <!-- Account -->
     <v-card class="mb-4" elevation="2">
