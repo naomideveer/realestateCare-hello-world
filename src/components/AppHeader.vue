@@ -23,13 +23,13 @@ export default {
       />
     </v-app-bar-title>
     <template #append>
-      <v-btn icon>
+      <v-btn icon aria-label="Meldingen">
         <v-icon color="secondary">mdi-bell-outline</v-icon>
       </v-btn>
-      <v-btn icon @click="$router.push('/settings')">
+      <v-btn icon @click="$router.push('/settings')" aria-label="Instellingen">
         <v-icon color="secondary">mdi-cog-outline</v-icon>
       </v-btn>
-      <v-btn icon @click="logout">
+      <v-btn icon @click="logout" aria-label="Uitloggen">
         <v-icon color="secondary">mdi-logout</v-icon>
       </v-btn>
     </template>
