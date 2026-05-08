@@ -1,18 +1,9 @@
 <script>
 import { useInspectionStore } from '@/stores/inspectionStore'
 import InspectionDetail from '@/components/InspectionDetail.vue'
-
 export default {
   name: 'AssignedView',
-
   components: { InspectionDetail },
-
-  data() {
-    return {
-      selectedInspection: null,
-    }
-  },
-
   computed: {
     inspections() {
       return useInspectionStore().assignedInspections
@@ -21,11 +12,9 @@ export default {
       return useInspectionStore().error
     },
   },
-
   async created() {
     await useInspectionStore().loadInspections()
   },
-
   methods: {
     formatDate(dateString) {
       return new Date(dateString).toLocaleDateString('nl-NL', {
@@ -33,9 +22,6 @@ export default {
         month: '2-digit',
         year: 'numeric',
       })
-    },
-    selectInspection(inspection) {
-      this.selectedInspection = inspection
     },
   },
 }
@@ -49,29 +35,23 @@ export default {
       {{ error }}
     </v-alert>
 
-    <v-row>
-      <v-col v-for="inspection in inspections" :key="inspection.id" cols="12">
-        <v-card
-          elevation="2"
-          class="clickable mb-2"
-          @click="selectInspection(inspection)"
-          :class="{
-            'selected-card': selectedInspection && selectedInspection.id === inspection.id,
-          }"
-        >
-          <v-card-text>
-            <div class="d-flex justify-space-between align-center">
+    <v-expansion-panels>
+      <v-expansion-panel v-for="inspection in inspections" :key="inspection.id">
+        <v-expansion-panel-title>
+          <div class="d-flex justify-space-between align-center w-100 pr-4">
+            <div>
               <p class="font-weight-bold text-primary">{{ inspection.address }}</p>
               <p class="text-grey text-sm">{{ inspection.inspectorName }}</p>
             </div>
             <v-chip color="secondary" size="small">
               {{ formatDate(inspection.date) }}
             </v-chip>
-          </v-card-text>
-        </v-card>
-      </v-col>
-    </v-row>
-
-    <InspectionDetail v-if="selectedInspection" :inspection="selectedInspection" class="mt-4" />
+          </div>
+        </v-expansion-panel-title>
+        <v-expansion-panel-text>
+          <InspectionDetail :inspection="inspection" />
+        </v-expansion-panel-text>
+      </v-expansion-panel>
+    </v-expansion-panels>
   </div>
 </template>

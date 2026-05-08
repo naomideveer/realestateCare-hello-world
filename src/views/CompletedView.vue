@@ -9,7 +9,7 @@ export default {
 
 <template>
   <div class="pa-4">
-    <p class="page-title">uitgevoerde rapportages</p>
+    <p class="page-title">Uitgevoerde rapportages</p>
     <CompletedInspections />
   </div>
 </template>
