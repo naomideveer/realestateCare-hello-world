@@ -11,16 +11,16 @@ export default {
       <span>Home</span>
     </v-btn>
     <v-btn @click="$router.push('/assigned')" aria-label="Navigeer naar Toegewezen rapportages">
-      <v-icon>mdi-wrench-outline</v-icon>
+      <v-icon>mdi-clipboard-text-outline</v-icon>
       <span>Toegewezen</span>
     </v-btn>
-    <v-btn @click="$router.push('/knowledge')" aria-label="Navigeer naar Kennisbase">
-      <v-icon>mdi-book-open-outline</v-icon>
-      <span>Kennisbase</span>
+    <v-btn @click="$router.push('/completed')" aria-label="Navigeer naar Uitgevoerde rapportages">
+      <v-icon>mdi-clipboard-check-outline</v-icon>
+      <span>Uitgevoerd</span>
     </v-btn>
-    <v-btn @click="$router.push('/settings')" aria-label="Navigeer naar Informatie">
-      <v-icon>mdi-information-outline</v-icon>
-      <span>Informatie</span>
+    <v-btn @click="$router.push('/settings')" aria-label="Navigeer naar Instellingen">
+      <v-icon>mdi-cog-outline</v-icon>
+      <span>Instellingen</span>
     </v-btn>
   </v-bottom-navigation>
 </template>
