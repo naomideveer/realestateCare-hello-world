@@ -1,7 +1,6 @@
 <script>
 export default {
   name: 'LoginView',
-
   data() {
     return {
       username: '',
@@ -9,12 +8,10 @@ export default {
       error: null,
     }
   },
-
   methods: {
     login() {
       const users = JSON.parse(localStorage.getItem('users') || '[]')
       const user = users.find((u) => u.username === this.username && u.password === this.password)
-
       if (user) {
         localStorage.setItem('loggedIn', 'true')
         this.$router.push('/dashboard')
@@ -34,13 +31,10 @@ export default {
           <div class="login-logo-bar">
             <img src="/logo_rec.png" alt="RealEstateCare" height="48" />
           </div>
-
           <v-card-title class="text-center mb-4">Inloggen</v-card-title>
-
           <v-alert v-if="error" type="error" class="mb-4">
             {{ error }}
           </v-alert>
-
           <v-text-field
             v-model="username"
             label="Gebruikersnaam"
@@ -48,7 +42,6 @@ export default {
             variant="outlined"
             class="mb-3"
           />
-
           <v-text-field
             v-model="password"
             label="Wachtwoord"
@@ -58,8 +51,10 @@ export default {
             class="mb-4"
             @keyup.enter="login"
           />
-
-          <v-btn color="primary" block size="large" @click="login"> Inloggen </v-btn>
+          <v-btn color="primary" block size="large" @click="login">Inloggen</v-btn>
+          <p class="text-grey forgot-password">
+            Wachtwoord vergeten? Neem contact op met de helpdesk.
+          </p>
         </v-card>
       </v-col>
     </v-row>
