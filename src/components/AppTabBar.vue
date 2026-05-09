@@ -18,6 +18,10 @@ export default {
       <v-icon>mdi-clipboard-check-outline</v-icon>
       <span>Uitgevoerd</span>
     </v-btn>
+    <v-btn @click="$router.push('/knowledge')" aria-label="Navigeer naar Kennisbase">
+      <v-icon>mdi-book-open-outline</v-icon>
+      <span>Kennisbase</span>
+    </v-btn>
     <v-btn @click="$router.push('/settings')" aria-label="Navigeer naar Instellingen">
       <v-icon>mdi-cog-outline</v-icon>
       <span>Instellingen</span>

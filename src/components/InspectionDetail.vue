@@ -15,6 +15,13 @@ export default {
         year: 'numeric',
       })
     },
+    formatStatus(status) {
+      const labels = {
+        completed: 'Voltooid',
+        assigned: 'Toegewezen',
+      }
+      return labels[status] ?? status
+    },
   },
 }
 </script>
@@ -22,7 +29,7 @@ export default {
 <template>
   <div>
     <p><strong>Datum:</strong> {{ formatDate(inspection.date) }}</p>
-    <p><strong>Status:</strong> {{ inspection.status }}</p>
+    <p><strong>Status:</strong> {{ formatStatus(inspection.status) }}</p>
 
     <!-- Schade -->
     <div v-if="inspection.damage.length > 0" class="mt-4">
